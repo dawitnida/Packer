@@ -1,6 +1,6 @@
 {
-  "_comment": "Demo docker packer template",
-  "description": "Demo packer template for GitHub Actions https://github.com/dawitnida/packer-github-actions",
+  "_comment": "Demo docker packer template-x",
+  "description": "Demo packer template-x for Packer GitHub Actions https://github.com/dawitnida/packer-github-actions",
   "builders": [
     {
       "type": "docker",
@@ -20,7 +20,7 @@
     [
       {
         "type": "docker-tag",
-        "repository": "dboard/demo",
+        "repository": "{{user `repository`}}",
         "tag": "{{user `environment`}}"
       }
     ]
