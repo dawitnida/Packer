@@ -13,7 +13,9 @@ action "packer-validate" {
   needs = "filter-open-synced-pr"
   secrets = [
     "GITHUB_TOKEN",
-    "PACKER_ACTION_WORKING_DIR",
   ]
   args = "*.json"
+  env = {
+    PACKER_ACTION_WORKING_DIR = "Dockers"
+  }
 }
