@@ -20,7 +20,7 @@
     [
       {
         "type": "docker-tag",
-        "repository": "dboard/demo",
+        "repository": "{{user `repository`}}",
         "tag": "{{user `environment`}}"
       }
     ]

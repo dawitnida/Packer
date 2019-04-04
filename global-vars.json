@@ -1,4 +1,5 @@
 {
   "environment": "dev",
-  "image": "ubuntu:16.04"
+  "image": "ubuntu:16.04",
+  "repository": "dboard/demo"
 }
