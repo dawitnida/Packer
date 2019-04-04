@@ -38,3 +38,19 @@ action "packer-validate-demo-2" {
     TEMPLATE_FILE_NAME = "demo-2.json"
   }
 }
+
+workflow "packer-validate-temp-z" {
+  resolves = "packer-validate-demo-3"
+  on = "pull_request"
+}
+
+action "packer-validate-demo-3" {
+  uses = "dawitnida/packer-github-actions/validate@master"
+  needs = "filter-open-synced-pr"
+  secrets = [
+    "GITHUB_TOKEN",
+  ]
+  env = {
+    TEMPLATE_FILE_NAME = "demo-docker-template.json"
+  }
+}
