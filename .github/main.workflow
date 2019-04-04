@@ -12,4 +12,5 @@ action "packer-validate" {
   uses = "dawitnida/packer-github-actions/validate@master"
   needs = "filter-to-pr-open-synced"
   secrets = ["GITHUB_TOKEN"]
+  args = "*.json"
 }
