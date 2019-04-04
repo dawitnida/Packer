@@ -9,7 +9,7 @@ action "filter-to-pr-open-synced" {
 }
 
 action "packer-validate" {
-  uses = "dawitnida/packer-github-actions/validate@master"
+  uses = "dawitnida/packer-github-actions/validate@dev"
   needs = "filter-to-pr-open-synced"
   secrets = ["GITHUB_TOKEN"]
   args = "*.json"
