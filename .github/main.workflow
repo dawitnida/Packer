@@ -15,7 +15,6 @@ action "packer-validate" {
     "GITHUB_TOKEN",
   ]
   env = {
-    PACKER_ACTION_WORKING_DIR = "Dockers"
-    TEMPLATE_FILE_NAME = "*.json"
+    TEMPLATE_FILE_NAME = "demo-2.json"
   }
 }
