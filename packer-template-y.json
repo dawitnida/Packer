@@ -12,7 +12,7 @@
     {
       "type": "shell",
       "inline": [
-        "echo 'hello!' > /root/test",
+        "echo 'hello!' > /root/test"
       ]
     }
   ],

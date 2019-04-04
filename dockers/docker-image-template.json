@@ -10,7 +10,7 @@
   ],
   "provisioners": [
     {
-      "type": "local-shell",
+      "type": "shell",
       "inline": [
         "echo 'hello!' > /root/test"
       ]
