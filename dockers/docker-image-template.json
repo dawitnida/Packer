@@ -1,6 +1,6 @@
 {
-  "_comment": "Demo docker packer template",
-  "description": "Demo packer template for GitHub Actions https://github.com/dawitnida/packer-github-actions",
+  "_comment": "Demo docker packer template docker-image-template-x inside docker directory",
+  "description": "Demo packer template docker-image-template-x inside docker directory for Packer GitHub Actions https://github.com/dawitnida/packer-github-actions",
   "builders": [
     {
       "type": "docker",
@@ -12,7 +12,7 @@
     {
       "type": "shell",
       "inline": [
-        "echo 'hello!' > /root/test",
+        "echo 'hello!' > /root/test"
       ]
     }
   ],
