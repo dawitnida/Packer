@@ -1,0 +1,28 @@
+{
+  "_comment": "Demo docker packer template",
+  "description": "Demo packer template for GitHub Actions https://github.com/dawitnida/packer-github-actions",
+  "builders": [
+    {
+      "type": "docker",
+      "image": "{{user `image`}}",
+      "commit": "true"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "echo 'hello!' > /root/test"
+      ]
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "dboard/demo",
+        "tag": "{{user `environment`}}"
+      }
+    ]
+  ]
+}

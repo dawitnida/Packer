@@ -1,0 +1,4 @@
+{
+  "environment": "dev",
+  "image": "ubuntu:16.04"
+}
