@@ -16,5 +16,6 @@ action "packer-validate" {
   ]
   env = {
     PACKER_ACTION_WORKING_DIR = "Dockers"
+    TEMPLATE_FILE_NAME = "*.json"
   }
 }
