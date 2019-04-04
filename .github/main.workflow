@@ -18,6 +18,6 @@ action "packer-validate" {
     "-var-file=global-vars.json"
   ]
   env = {
-    TEMPLATE_FILE_NAME = "demo-2.json"
+    TEMPLATE_FILE_NAME = "-var-file=global-vars.json demo-2.json"
   }
 }
