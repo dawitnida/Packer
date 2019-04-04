@@ -1,2 +1,2 @@
 # Packer
-Packer template collection
+Packer template collection for Packer GitHub Actions test.
