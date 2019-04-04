@@ -14,6 +14,9 @@ action "packer-validate" {
   secrets = [
     "GITHUB_TOKEN",
   ]
+  args = [
+    "-var-file=global-vars.json"
+  ]
   env = {
     TEMPLATE_FILE_NAME = "demo-2.json"
   }
