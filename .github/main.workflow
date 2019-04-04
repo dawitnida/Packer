@@ -17,5 +17,6 @@ action "packer-validate" {
   args = "*.json"
   env = {
     PACKER_ACTION_WORKING_DIR = "Dockers"
+    ACTION_COMMENT = "1"
   }
 }
