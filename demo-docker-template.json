@@ -1,5 +1,5 @@
 {
-  "_comment": "Demo packer template",
+  "_comment": "Demo docker packer template",
   "description": "Demo packer template for GitHub Actions https://github.com/dawitnida/packer-github-actions",
   "builders": [
     {
