@@ -4,7 +4,7 @@
   "builders": [
     {
       "type": "docker",
-      "image": "ubuntu:16.04",
+      "image": "{{user `image`}}",
       "commit": "true"
     }
   ],
@@ -12,7 +12,7 @@
     {
       "type": "shell",
       "inline": [
-        "echo 'hello!' > /root/test",
+        "echo 'hello!' > /root/test"
       ]
     }
   ],
@@ -21,7 +21,7 @@
       {
         "type": "docker-tag",
         "repository": "dboard/demo",
-        "tag": "v0.0.1"
+        "tag": "{{user `environment`}}"
       }
     ]
   ]

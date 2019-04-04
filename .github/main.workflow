@@ -3,14 +3,21 @@ workflow "Packer" {
   on = "pull_request"
 }
 
-action "filter-to-pr-open-synced" {
+action "filter-open-synced-pr" {
   uses = "actions/bin/filter@master"
   args = "action 'opened|synchronize'"
 }
 
 action "packer-validate" {
   uses = "dawitnida/packer-github-actions/validate@master"
-  needs = "filter-to-pr-open-synced"
-  secrets = ["GITHUB_TOKEN"]
-  args = "*.json"
+  needs = "filter-open-synced-pr"
+  secrets = [
+    "GITHUB_TOKEN",
+  ]
+  args = [
+    "-var-file=global-vars.json"
+  ]
+  env = {
+    TEMPLATE_FILE_NAME = "demo-2.json"
+  }
 }
