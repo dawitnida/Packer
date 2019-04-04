@@ -13,7 +13,6 @@
       "type": "shell",
       "inline": [
         "echo 'hello!' > /root/test"
-      ]
     }
   ],
   "post-processors": [
