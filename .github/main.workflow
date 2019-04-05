@@ -14,11 +14,6 @@ action "packer-build-template-y" {
   }
 }
 
-workflow "packer inspect & validate template-y" {
-  resolves = "packer-inspect-template-y"
-  on = "pull_request"
-}
-
 action "packer-validate-template-y" {
   uses = "dawitnida/packer-github-actions/validate@master"
   secrets = [
