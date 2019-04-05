@@ -5,7 +5,8 @@ workflow "packer build template-y" {
 
 action "filter-packer-build-label" {
   uses = "actions/bin/filter@master"
-  args = "label 'packer-build'"
+  args = "label packerbuild"
+  secrets = ["GITHUB_TOKEN"]
 }
 
 action "packer-build-template-y" {
