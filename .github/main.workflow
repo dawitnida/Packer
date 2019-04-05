@@ -1,6 +1,5 @@
 workflow "packer build template-y" {
   resolves = "packer-build-template-y"
-  needs = "filter-packer-build-label"
   on = "label"
 }
 
@@ -33,6 +32,7 @@ action "packer-inspect-template-y" {
 
 action "packer-validate-template-y" {
   uses = "dawitnida/packer-github-actions/validate@master"
+  needs = "filter-packer-build-label"
   secrets = [
     "GITHUB_TOKEN",
   ]
