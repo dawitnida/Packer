@@ -1,6 +1,6 @@
 workflow "packer build template-y" {
   resolves = "packer-build-template-y"
-  on = "label"
+  on = "release"
 }
 
 action "filter-packer-build-label" {
