@@ -1,0 +1,23 @@
+# Validate packer template file in a directory
+
+name: Packer Validator
+
+on:
+  pull_request:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  
+  packer_validate:
+    # The type of runner that the job will run on
+    runs-on: hashicorp/packer:1.5.5
+    
+    steps:
+      - name: Packer validate template-y without argument
+        uses: dawitnida/packer-github-actions/validate@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEMPLATE_FILE_NAME: ${{ env.TEMPLATE_FILE_NAME }}
+  
