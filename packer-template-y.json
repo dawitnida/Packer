@@ -21,7 +21,7 @@
       {
         "type": "docker-tag",
         "repository": "dboard/demo",
-        "tag": "v0.0.2"
+        "tag": "v0.0.3"
       }
     ]
   ]
